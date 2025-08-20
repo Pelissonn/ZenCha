@@ -1,0 +1,586 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  height: 10vh;
+  background-color: #4a4e3a;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  padding-top: 0.5rem;
+}
+
+.icon1 {
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+}
+
+aside {
+  background-color: #ececbf;
+  height: 60vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 99;
+  top: -57%;
+  color: aliceblue;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+aside:hover {
+  top: 0;
+  background-color: #45473b;
+  opacity: 1;
+}
+
+#here{
+  color: #d4d2a6;
+}
+
+#here::after{
+  content: " <";
+}
+
+.logo {
+  padding-left: 2%;
+  padding-top: 2%;
+  font-family: "Yuji Mai", serif;
+  font-size: 2rem;
+}
+
+.logo > a {
+  text-decoration: none;
+  color: white;
+}
+
+.Fpages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 13%;
+}
+
+#s {
+  margin-top: 5%;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.Fpages > a,
+.Fpages > p {
+  text-decoration: none;
+  color: aliceblue;
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+}
+
+.Fpages > a:hover {
+  color: #ececbf;
+}
+
+.shop {
+  min-height: 90vh;
+  background-color: #4a4e3a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.shop-title {
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.shop-title > p {
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+  font-size: 2.25rem;
+  text-decoration: underline 3px;
+}
+
+.shop-title .cart-icon {
+  color: aliceblue;
+}
+
+.shop-title .cart-icon:hover svg {
+  color: #ececbf;
+}
+
+.shop-title .cart-icon svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  width: 95%;
+}
+
+.promo-card {
+  background-color: #ececbf;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #d4d2a6;
+}
+
+.promo-card img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.promo-card h3 {
+  font-family: "Lexend Deca", sans-serif;
+  color: #4a4e3a;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.promo-card p {
+  font-family: "DM Sans", sans-serif;
+  color: #4a4e3a;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.promo-card .price {
+  font-family: "DM Sans", sans-serif;
+  color: #4a4e3a;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.promo-card .original-price {
+  text-decoration: line-through;
+  color: #7a7a7a;
+  font-weight: normal;
+  margin-right: 0.5rem;
+}
+
+.promo-card .promo-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 1.1rem;
+  background-color: #51573a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.promo-card .promo-button:hover {
+  background-color: #3d432b;
+}
+
+.product-card {
+  background-color: #ececbf;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-family: "Lexend Deca", sans-serif;
+  color: #4a4e3a;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-family: "DM Sans", sans-serif;
+  color: #4a4e3a;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+  font-family: "DM Sans", sans-serif;
+  color: #4a4e3a;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.product-card .buy-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
+  background-color: #51573a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.product-card .buy-button:hover {
+  background-color: #3d432b;
+}
+
+footer {
+  background-color: #45473b;
+  color: aliceblue;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-contact p,
+.footer-copyright p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.footer-social a {
+  color: aliceblue;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.footer-social a:hover svg {
+  color: #ececbf;
+}
+
+.footer-social svg {
+  vertical-align: middle;
+}
+
+.footer-search .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.footer-search .search-bar input {
+  padding: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  border: 1px solid #ececbf;
+  border-radius: 5px 0 0 5px;
+  width: 80%;
+  background-color: white;
+  color: #4a4e3a;
+}
+
+.footer-search .search-bar input:focus {
+  outline: none;
+  border-color: #d4d2a6;
+}
+
+.footer-search .search-bar button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ececbf;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #ececbf;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.footer-search .search-bar button svg {
+  color: #4a4e3a;
+}
+
+.footer-search .search-bar button:hover {
+  background-color: #d4d2a6;
+}
+
+@media (max-width: 768px) {
+  .main {
+    height: 10vh;
+  }
+
+  aside {
+    height: 100vh;
+  }
+
+  .shop {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .shop-title {
+    padding-bottom: 1.5rem;
+  }
+
+  .shop-title > p {
+    font-size: 1.75rem;
+  }
+
+  .shop-title .cart-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .products {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 95%;
+  }
+
+  .promo-card {
+    padding: 1.2rem;
+  }
+
+  .promo-card img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .promo-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .promo-card p {
+    font-size: 0.9rem;
+  }
+
+  .promo-card .price {
+    font-size: 1rem;
+  }
+
+  .promo-card .promo-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .product-card {
+    padding: 1.2rem;
+  }
+
+  .product-card img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .product-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+  }
+
+  .product-card .price {
+    font-size: 0.9rem;
+  }
+
+  .product-card .buy-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  #s {
+    font-size: 1.25rem;
+  }
+
+  .Fpages > a,
+  .Fpages > p {
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-search .search-bar {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop {
+    padding: 0.5rem;
+  }
+
+  .shop-title {
+    padding-bottom: 1rem;
+  }
+
+  .shop-title > p {
+    font-size: 1.5rem;
+  }
+
+  .shop-title .cart-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 98%;
+  }
+
+  .promo-card {
+    padding: 1rem;
+  }
+
+  .promo-card img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .promo-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .promo-card p {
+    font-size: 0.85rem;
+  }
+
+  .promo-card .price {
+    font-size: 0.9rem;
+  }
+
+  .promo-card .promo-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+
+  .product-card img {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 0.85rem;
+  }
+
+  .product-card .price {
+    font-size: 0.85rem;
+  }
+
+  .product-card .buy-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .footer-contact p,
+  .footer-copyright p {
+    font-size: 0.9rem;
+  }
+
+  .footer-search .search-bar {
+    max-width: 200px;
+  }
+
+  .footer-search .search-bar input {
+    font-size: 0.85rem;
+  }
+
+  .footer-search .search-bar button {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  #s {
+    font-size: 1.25rem;
+  }
+
+  .Fpages > a,
+  .Fpages > p {
+    font-size: 1rem;
+  }
+}
+
+/*.yuji-mai-regular {
+  font-family: "Yuji Mai", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  .patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cabin-<uniquifier> {
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.lexend-deca-<uniquifier> {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+}*/
